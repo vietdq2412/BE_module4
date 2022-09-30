@@ -1,4 +1,4 @@
-package com.codegym.repository.userRepo;
+package com.codegym.repository;
 
 import com.codegym.model.AppUser;
 import org.springframework.data.jpa.repository.JpaRepository;

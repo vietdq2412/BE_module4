@@ -27,9 +27,11 @@ import java.util.Set;
 @NoArgsConstructor
 public class Account {
     @Id
-    @GeneratedValue(strategy = GenerationType.AUTO)
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name = "id", nullable = false)
     private Long id;
+
+    @Column(unique=true)
     private String username;
     private String password;
 

@@ -14,8 +14,10 @@ import static lombok.AccessLevel.PUBLIC;
 @AllArgsConstructor
 public class Role {
     @Id
-    @GeneratedValue(strategy = GenerationType.AUTO)
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name = "id", nullable = false)
     private Long id;
+
+    @Column(unique=true)
     private String name;
 }

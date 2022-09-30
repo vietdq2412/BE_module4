@@ -35,6 +35,7 @@ public class UserService {
 
         Account accountS = new Account(2L, "viet", "123456", senaRoles);
 
+        System.out.println(accountSena.getPassword());
         listAccount.add(accountKai);
         listAccount.add(accountSena);
     }
@@ -75,13 +76,13 @@ public class UserService {
         return null;
     }
 
-    public boolean checkLogin(Account account) {
-        for (Account accountExist : listAccount) {
-            if (StringUtils.equals(account.getUsername(), accountExist.getUsername())
-                    && StringUtils.equals(account.getPassword(), accountExist.getPassword())) {
-                return true;
-            }
-        }
-        return false;
-    }
+//    public boolean checkLogin(Account account) {
+//        for (Account accountExist : listAccount) {
+//            if (StringUtils.equals(account.getUsername(), accountExist.getUsername())
+//                    && StringUtils.equals(account.getPassword(), accountExist.getPassword())) {
+//                return true;
+//            }
+//        }
+//        return false;
+//    }
 }
